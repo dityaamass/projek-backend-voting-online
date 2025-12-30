@@ -14,7 +14,7 @@
 </head>
 <div class="d-flex justify-content-center align-items-center vh-100">
     <div class="box p-4 shadow bg-white rounded" sytle="width: 500px;">
-        <img src="" alt="">
+        <img src="gambar/Stikom Bali.png" alt="">
 
         <body class="body">
             <form method="">
