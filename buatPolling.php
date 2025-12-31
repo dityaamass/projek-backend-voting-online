@@ -14,6 +14,17 @@
 </head>
 
 <body>
+    <ul class="nav justify-content-end bg-light p-2 shadow-sm">
+        <li class="nav-item me-auto">
+            <img src="gambar/Stikom Bali.png" alt="logo" widht="50" height="50" class="rounded">
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-danger" href="login.php">Logout</a>
+        </li>
+    </ul>
     <h1>SISTEM PEMILIHAN ORGANISASI ITB STIKOM BALI</h1>
     <h5>Silakan Lengkapi Data di Bawah Ini</h5>
 
