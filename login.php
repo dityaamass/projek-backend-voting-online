@@ -26,7 +26,7 @@
                         <span class="input-group-text">
                             <i class='bxr  bx-user'></i>
                         </span>
-                        <input type="text" class="form-control ps-5" name="username">
+                        <input type="text" class="form-control" name="username">
                     </div>
                     <div class="form-text">Silakan Masukan Username Anda</div>
                 </div>
@@ -37,7 +37,7 @@
                         <span class="input-group-text">
                             <i class='bxr  bx-lock'></i>
                         </span>
-                        <input type="password" class="form-control ps-5" name="pass">
+                        <input type="password" class="form-control" name="pass">
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary w-100">Login</button>
