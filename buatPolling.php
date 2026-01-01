@@ -20,7 +20,7 @@
             <img src="gambar/Stikom Bali.png" alt="logo" widht="50" height="50" class="rounded">
         </li>
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="home.php">Home</a>
         </li>
         <li class="nav-item">
             <a class="nav-link text-danger" href="login.php">Logout</a>

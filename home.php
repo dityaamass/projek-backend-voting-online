@@ -14,6 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="home.css">
 </head>
 
 <body>
@@ -60,7 +61,7 @@
             </div>
 
             <div class="col-md-7">
-                <h3 class="baout-title">About Us</h3>
+                <h3 class="about-title">About Us</h3>
                 <hr class="about-line">
                 <p class="about-text">
                     Sistem Pemilihan Organisasi ITB STIKOM Bali merupakan aplikasi berbasis website yang digunakan
@@ -118,8 +119,15 @@
         </div>
     </div>
 
-    <h3>- Ayo Buat Polling -</h3>
-    <a href="buatPolling.php" class="btn btn-primary">Buat Polling</a>
+    <div class="cta-section">
+        <h3>- Ayo Buat Polling -</h3>
+        <p>
+            Mari berpartisipasi dalam proses pemilihan organisasi mahasiswa secara online
+            yang transparan, aman, dan terpercaya.
+            Gunakan hak suara Anda untuk menentukan kepengurusan organisasi yang lebih baik.
+        </p>
+        <a href="buatPolling.php" class="btn btn-primary">Buat Polling</a>
+    </div>
 
 </body>
 
