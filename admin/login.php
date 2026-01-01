@@ -40,7 +40,7 @@
                         <input type="password" class="form-control" name="pass">
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary w-100">Login</button>
+                <a href="home.php" type="button" class="btn btn-primary w-100">Login</a>
             </form>
     </div>
 </div>
