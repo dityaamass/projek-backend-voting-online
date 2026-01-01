@@ -58,8 +58,68 @@
                     </button>
                 </div>
             </div>
+
+            <div class="col-md-7">
+                <h3 class="baout-title">About Us</h3>
+                <hr class="about-line">
+                <p class="about-text">
+                    Sistem Pemilihan Organisasi ITB STIKOM Bali merupakan aplikasi berbasis website yang digunakan
+                    untuk mendukung proses pemilihan pengurus organisasi mahasiswa secara online.
+                    Sistem ini bertujuan untuk meningkatkan efisiensi, transparansi, dan keamanan pemungutan suara,
+                    serta memudahkan mahasiswa dan panitia dalam pelaksanaan dan pengelolaan proses pemilihan.
+                </p>
+
+                <p>Keuntungan yang didapat adalah paperless, meminimalisir kecurangan dan real time result.</p>
+
+                <div class="row feature-list mt-4">
+                    <div class="col-md-4 feature-item">
+                        <div class="feature-box">
+                            <img src="gambar/Stikom Bali.png" alt="logo" width="60" height="60" class="rounded">
+                            <span>Efisien & Efektif</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 feature-item">
+                        <div class="feature-box">
+                            <img src="gambar/Stikom Bali.png" alt="logo" width="60" height="60" class="rounded">
+                            <span>Penghitungan suara lebih cepat</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 feature-item">
+                        <div class="feature-box">
+                            <img src="gambar/Stikom Bali.png" alt="logo" width="60" height="60" class="rounded">
+                            <span>Tidak ada duplikasi data pemilih</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 feature-item">
+                        <div class="feature-box">
+                            <img src="gambar/Stikom Bali.png" alt="logo" width="60" height="60" class="rounded">
+                            <span>Tidak ada suara rusak</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 feature-item">
+                        <div class="feature-box">
+                            <img src="gambar/Stikom Bali.png" alt="logo" width="60" height="60" class="rounded">
+                            <span>Akurasi hitungan suara tinggi</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 feature-item">
+                        <div class="feature-box">
+                            <img src="gambar/Stikom Bali.png" alt="logo" width="60" height="60" class="rounded">
+                            <span>Menghemat biaya jangka panjang</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <h3>- Ayo Buat Polling -</h3>
+    <a href="buatPolling.php" class="btn btn-primary">Buat Polling</a>
 
 </body>
 
