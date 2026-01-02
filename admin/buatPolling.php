@@ -23,6 +23,15 @@
             <a class="nav-link active" aria-current="page" href="home.php">Home</a>
         </li>
         <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="buatPolling">Create Vote</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Vote</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Hasil Vote</a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link text-danger" href="login.php">Logout</a>
         </li>
     </ul>
@@ -49,6 +58,7 @@
                                 <input type="text" class="form-control" id="nama" aria-describedby="nama">
                             </div>
 
+                            
                             <div class="mb-3">
                                 <label for="organisasi" class="form-label">ORGANISASI</label>
                                 <select class="form-control" name="organisasi" id="organisasi" required>
