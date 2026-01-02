@@ -29,7 +29,7 @@
             <a class="nav-link active" aria-current="page" href="vote.php">Vote</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Hasil Vote</a>
+            <a class="nav-link active" aria-current="page" href="hasilVote.php">Hasil Vote</a>
         </li>
         <li class="nav-item">
             <a class="nav-link text-danger" href="login.php">Logout</a>
@@ -58,7 +58,7 @@
                                 <input type="text" class="form-control" id="nama" aria-describedby="nama">
                             </div>
 
-                            
+
                             <div class="mb-3">
                                 <label for="organisasi" class="form-label">ORGANISASI</label>
                                 <select class="form-control" name="organisasi" id="organisasi" required>
@@ -139,27 +139,42 @@
                             </div>
 
                             <button class="btn btn-primary">Simpan Data</button>
-                        </form> 
+                        </form>
                     </div>
                 </div>
-            </div> 
-            
-             <div class="col-md-10">
-                    <div class="card shadow-sm">
-                        <div class="card-header text-white bg-secondary text-center">
-                            Tabel Polling
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
+            </div>
+
+            <div class="col-md-10">
+                <div class="card shadow-sm">
+                    <div class="card-header text-white bg-secondary text-center">
+                        Tabel Polling
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
                             <table class="table">
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Judul</th>
-                                    <th scope="col">Nama</th>
-                                    <th scope="col">Organisasi</th>
-                                    <th scope="col">foto</th>
-                                    <th scope="col">Aksi</th>
-                                </tr>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Judul</th>
+                                        <th scope="col">Nama</th>
+                                        <th scope="col">Organisasi</th>
+                                        <th scope="col">foto</th>
+                                        <th scope="col">Aksi</th>
+                                    </tr>
+                                <tbody>
+                                    <tr>
+                                        <th>1</th>
+                                        <td>Pemilihan Ketua Bem</td>
+                                        <td>Nanda</td>
+                                        <td>BEM</td>
+                                        <td>Foto</td>
+                                        <td scope="row">
+                                            <button type="button" class="btn btn-danger">Delete</button>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                                </thead>
                             </table>
                         </div>
                     </div>
@@ -168,7 +183,7 @@
         </div>
     </div>
 
-    
+
 </body>
 
 </html>
