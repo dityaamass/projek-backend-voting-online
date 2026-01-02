@@ -1,7 +1,3 @@
-<?php
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +15,7 @@
         <img src="gambar/Stikom Bali.png" alt="" class="d-block mx-auto mb-3" style="width: 100px">
 
         <body class="body">
-            <form method="">
+            <form method="post">
                 <div class="mb-4">
                     <label class="form-label">Username</label>
                     <div class="input-group">
@@ -40,7 +36,7 @@
                         <input type="password" class="form-control" name="pass">
                     </div>
                 </div>
-                <a href="home.php" type="button" class="btn btn-primary w-100">Login</a>
+                <button type="button" class="btn btn-primary w-100">Login</button>
             </form>
     </div>
 </div>
