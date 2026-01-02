@@ -20,13 +20,22 @@
 <body>
     <ul class="nav justify-content-end bg-light p-2 shadow-sm">
         <li class="nav-item me-auto">
-            <img src="gambar/Stikom Bali.png" alt="Logo" width="50" height="50" class="rounded">
+            <img src="gambar/Stikom Bali.png" alt="logo" widht="50" height="50" class="rounded">
         </li>
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="home.php">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-danger" href="#">Logout</a>
+            <a class="nav-link active" aria-current="page" href="buatPolling.php">Create Vote</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="vote.php">Vote</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="hasilVote.php">Hasil Vote</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-danger" href="login.php">Logout</a>
         </li>
     </ul>
 
@@ -119,7 +128,7 @@
         </div>
     </div>
 
-    <div class="cta-section">
+    <!-- <div class="cta-section">
         <h3>- Ayo Buat Polling -</h3>
         <p>
             Mari berpartisipasi dalam proses pemilihan organisasi mahasiswa secara online
@@ -127,7 +136,7 @@
             Gunakan hak suara Anda untuk menentukan kepengurusan organisasi yang lebih baik.
         </p>
         <a href="buatPolling.php" class="btn btn-primary">Buat Polling</a>
-    </div>
+    </div> -->
 
 </body>
 
