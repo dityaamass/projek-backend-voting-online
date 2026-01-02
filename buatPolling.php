@@ -85,11 +85,11 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">#</th>
+                                        <th scope="col">No</th>
                                         <th scope="col">Judul</th>
                                         <th scope="col">Nama</th>
-                                        <th scope="col">Organisasi</th>
-                                        <th scope="col">foto</th>
+                                        <th scope="col">Jenis Kelamin</th>
+                                        <th scope="col">Foto</th>
                                         <th scope="col">Aksi</th>
                                     </tr>
                                 <tbody>
@@ -97,7 +97,7 @@
                                         <th>1</th>
                                         <td>Pemilihan Ketua Bem</td>
                                         <td>Nanda</td>
-                                        <td>BEM</td>
+                                        <td>Laki-Laki</td>
                                         <td>Foto</td>
                                         <td scope="row">
                                             <button type="button" class="btn btn-danger">Delete</button>

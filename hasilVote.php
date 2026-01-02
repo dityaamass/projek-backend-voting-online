@@ -50,9 +50,9 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">#</th>
+                                        <th scope="col">No</th>
                                         <th scope="col">Nama</th>
-                                        <th scope="col">Organisasi</th>
+                                        <th scope="col">Jenis Kelamin</th>
                                         <th scope="col">foto</th>
                                         <th scope="col">Jumlah Vote</th>
                                     </tr>
