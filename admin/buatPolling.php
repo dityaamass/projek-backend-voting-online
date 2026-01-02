@@ -23,10 +23,10 @@
             <a class="nav-link active" aria-current="page" href="home.php">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="buatPolling">Create Vote</a>
+            <a class="nav-link active" aria-current="page" href="buatPolling.php">Create Vote</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Vote</a>
+            <a class="nav-link active" aria-current="page" href="vote.php">Vote</a>
         </li>
         <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Hasil Vote</a>
