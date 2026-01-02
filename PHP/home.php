@@ -14,7 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="CSS/home.css">
 </head>
 
 <body>
@@ -33,9 +33,6 @@
         </li>
         <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="hasilVote.php">Hasil Vote</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-danger" href="login.php">Logout</a>
         </li>
     </ul>
 
