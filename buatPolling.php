@@ -158,11 +158,11 @@ if (isset($_POST['simpan'])) {
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">#</th>
+                                        <th scope="col">No</th>
                                         <th scope="col">Judul</th>
                                         <th scope="col">Nama</th>
-                                        <th scope="col">Organisasi</th>
-                                        <th scope="col">foto</th>
+                                        <th scope="col">Jenis Kelamin</th>
+                                        <th scope="col">Foto</th>
                                         <th scope="col">Aksi</th>
                                     </tr>
                                 <tbody>
@@ -180,6 +180,7 @@ if (isset($_POST['simpan'])) {
 
                                     ?>
                                     <tr>
+<<<<<<< HEAD
                                         <th scope="row"><?php echo $urut++?></th>
                                         <td scope="row"><?php echo $judulPolling ?></td>
                                         <td scope="row"><?php echo $nama ?></td>
@@ -187,6 +188,13 @@ if (isset($_POST['simpan'])) {
                                         <td scope="row">
                                             <img src="gambar/<?php echo $foto ?>"  style="width: 100px; height: 100px; object-fit: cover;" alt="">
                                         </td>
+=======
+                                        <th>1</th>
+                                        <td>Pemilihan Ketua Bem</td>
+                                        <td>Nanda</td>
+                                        <td>Laki-Laki</td>
+                                        <td>Foto</td>
+>>>>>>> 4fa72a2b73af5f51fdb67ad1be6cc028a9a49e89
                                         <td scope="row">
                                             <button type="button" class="btn btn-danger">Delete</button>
                                         </td>
