@@ -1,9 +1,9 @@
 <?php
 
-    $host = 'localhost';
-    $user = 'root';
-    $pass = '';
-    $db = 'db_voting';
+    $host = "localhost";
+    $user = "root";
+    $pass = "";
+    $db = "e-voting";
 
     $conn = mysqli_connect($host, $user, $pass, $db);
 

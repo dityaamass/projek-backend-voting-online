@@ -1,3 +1,69 @@
+<?php
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+include 'database/conn.php';
+
+$judulPolling = "";
+$nama = "";
+$jenisKelamin = "";
+$foto = "";
+$sukses = "";
+$error = "";
+$op = "";
+
+
+// proses masukan data
+
+if (isset($_POST['simpan'])) {
+    $judulPolling = $_POST['judulPolling'];
+    $nama = $_POST['nama'];
+    $jenisKelamin = $_POST['Jkel'];
+
+    $foto = $_FILES['foto']['name'];
+    $file_tmp = $_FILES['foto']['tmp_name'];
+
+    if ($judulPolling && $nama && $jenisKelamin && $foto) {
+        move_uploaded_file($file_tmp, "gambar/" . $foto);
+
+        $sql1 = "INSERT INTO tb_polling 
+        (judul_polling, nama, Jkel, foto_calon, jumlah_suara) 
+        VALUES 
+        ('$judulPolling', '$nama', '$jenisKelamin', '$foto', 0)";
+
+        $q1 = mysqli_query($conn, $sql1);
+
+        if ($q1) {
+            $sukses = "Data berhasil dimasukkan";
+        } else {
+            $error = "Gagal memasukkan data";
+        }
+    } else {
+        $error = "Silakan lengkapi semua data";
+    }
+}
+// }else {
+//     if (!empty($foto)) {
+//         move_uploaded_file($file_tmp, "gambar/" . $foto);
+//         $sql1 = "insert into tb_polling (judul_polling, nama, Jkel, foto_calon) values ('$judulPolling', '$nama', '$jenisKelamin', '$foto')";
+//         try {
+//             $q1 = mysqli_query($conn, $sql1);
+//             if ($q1) {
+//                 $sukses = "Data Berhasil Dimasukan";
+//             } else {
+//                 $error = "Gagal Memasukan Data";
+//             }
+//         } catch (Exception $e) {
+//             if ($e->getCode() == 1062) {
+//                 $error = "Data Sudah Ada";
+//             } else {
+//                 $error = "Terjadi error : " . $e->getMessage();
+//             }
+//         }
+//     } else {
+//         $error = "Silakan Masukan Semua Data";
+//     }
+// }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,33 +109,40 @@
                         Membuat Polling
                     </div>
                     <div class="card-body">
-                        <form method="">
+                        <form method="POST" enctype="multipart/form-data">
                             <div class="mb-3">
                                 <label for="polling" class="form-label">Judul Polling</label>
-                                <input type="text" class="form-control" id="polling" aria-describedby="polling">
+                                <input type="text" class="form-control" id="judulPolling" name = "judulPolling" aria-describedby="polling" value="<?php echo $judulPolling ?>">
                             </div>
 
                             <div class="mb-3">
                                 <label for="nama" class="form-label">Nama</label>
-                                <input type="text" class="form-control" id="nama" aria-describedby="nama">
+                                <input type="text" class="form-control" id="nama" name="nama" aria-describedby="nama" value="<?php echo $nama ?>">
                             </div>
 
                             <div class="mb-3">
                                 <label for="Jkel" class="form-label">Jenis Kelamin</label>
                                 <select class="form-control" name="Jkel" id="Jkel" required>
-                                    <option value="">- Jenis Kelamin</option>
-                                    <option value="Laki-Laki">Laki-laki</option>
-                                    <option value="Perempuan">Perempuan</option>
-
-                                </select> 
+                                    <option value="">- Jenis Kelamin -</option>
+                                    <option value="Laki-Laki" <?php if ($jenisKelamin == "Laki-laki") echo "selected" ?>>Laki-laki</option>
+                                    <option value="Perempuan" <?php if ($jenisKelamin == "Perempuan") echo "selected" ?>>Perempuan</option>
+                                </select>
                             </div>
 
                             <div class="mb-3">
                                 <label for="foto" class="form-label">Foto Calon Ketua</label>
-                                <input type="file" class="form-control" id="foto" name="foto">
+                                <?php 
+                                // if($op == 'edit' && $foto){
+                                //     echo '<img src="gambar/'. $foto.'" style="width: 150px; height: 150px; object-fit: cover; margin-bottom: 10px;" alt="Foto Saat ini"><br>';
+                                //     echo '<small class="text-muted">Kosongkan Jika tidak Ingin Mengganti Foto.</small>';
+                                // }
+                                ?>
+                                <input type="file" class="form-control" id="foto" name="foto" value="<?php echo $foto ?>">
                             </div>
 
-                            <button class="btn btn-primary">Simpan Data</button>
+                            <div class="col-12">
+                                <input type="submit" name="simpan" value="Simpan Data" class="btn btn-primary">
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -93,17 +166,34 @@
                                         <th scope="col">Aksi</th>
                                     </tr>
                                 <tbody>
+                                    <?php
+                                    $sql2 = "select * from tb_polling order by id_polling desc";
+                                    $q2 = mysqli_query($conn, $sql2);
+                                    $urut = 1;
+                                    while ($r2 = mysqli_fetch_array($q2)){
+                                        $id_polling = $r2['id_polling'];
+                                        $judulPolling = $r2['judul_polling'];
+                                        $nama = $r2['nama'];
+                                        $jenisKelamin = $r2['Jkel'];
+                                        $foto = $r2['foto_calon'];
+                                    
+
+                                    ?>
                                     <tr>
-                                        <th>1</th>
-                                        <td>Pemilihan Ketua Bem</td>
-                                        <td>Nanda</td>
-                                        <td>BEM</td>
-                                        <td>Foto</td>
+                                        <th scope="row"><?php echo $urut++?></th>
+                                        <td scope="row"><?php echo $judulPolling ?></td>
+                                        <td scope="row"><?php echo $nama ?></td>
+                                        <td scope="row"><?php echo $jenisKelamin ?></td>
+                                        <td scope="row">
+                                            <img src="gambar/<?php echo $foto ?>"  style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                                        </td>
                                         <td scope="row">
                                             <button type="button" class="btn btn-danger">Delete</button>
                                         </td>
                                     </tr>
-
+                                    <?php
+                                 }
+                                 ?>
                                 </tbody>
                                 </thead>
                             </table>
