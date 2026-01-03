@@ -8,7 +8,16 @@ $jenisKelamin = "";
 $foto = "";
 $sukses = "";
 $error = "";
-$op = "";
+
+if (isset($_GET['op']) && $_GET['op'] == 'delete'){
+    $id = $_GET['id'];
+
+    $sql = "DELETE FROM tb_polling WHERE id_polling= '$id'";
+    mysqli_query($conn, $sql);
+
+    header("Location: buatPolling.php");
+    exit;
+}
 
 
 // proses masukan data
@@ -24,46 +33,22 @@ if (isset($_POST['simpan'])) {
     if ($judulPolling && $nama && $jenisKelamin && $foto) {
         move_uploaded_file($file_tmp, "gambar/" . $foto);
 
-        $sql1 = "INSERT INTO tb_polling 
-        (judul_polling, nama, Jkel, foto_calon, jumlah_suara) 
+        $sql1 = "INSERT INTO tb_polling (judul_polling, nama, Jkel, foto_calon, jumlah_suara) 
         VALUES 
         ('$judulPolling', '$nama', '$jenisKelamin', '$foto', 0)";
 
-        $q1 = mysqli_query($conn, $sql1);
+        mysqli_query($conn, $sql1);
 
-        if ($q1) {
-            $sukses = "Data berhasil dimasukkan";
-        } else {
-            $error = "Gagal memasukkan data";
-        }
-    } else {
-        $error = "Silakan lengkapi semua data";
-    }
+        header("Location: buatPolling.php");
+        exit;
+
+        
+} else {
+    $error = "Semua Data Wajib Diisi";
 }
-// }else {
-//     if (!empty($foto)) {
-//         move_uploaded_file($file_tmp, "gambar/" . $foto);
-//         $sql1 = "insert into tb_polling (judul_polling, nama, Jkel, foto_calon) values ('$judulPolling', '$nama', '$jenisKelamin', '$foto')";
-//         try {
-//             $q1 = mysqli_query($conn, $sql1);
-//             if ($q1) {
-//                 $sukses = "Data Berhasil Dimasukan";
-//             } else {
-//                 $error = "Gagal Memasukan Data";
-//             }
-//         } catch (Exception $e) {
-//             if ($e->getCode() == 1062) {
-//                 $error = "Data Sudah Ada";
-//             } else {
-//                 $error = "Terjadi error : " . $e->getMessage();
-//             }
-//         }
-//     } else {
-//         $error = "Silakan Masukan Semua Data";
-//     }
-// }
-?>
+}
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -100,6 +85,10 @@ if (isset($_POST['simpan'])) {
     <h1>SISTEM PEMILIHAN ORGANISASI ITB STIKOM BALI</h1>
     <h5>Silakan Lengkapi Data di Bawah Ini</h5>
 
+    <?php if($error): ?>
+        <div class="alert alert-danger"><?= $error ?></div>
+    <?php endif; ?>
+
     <div class="container-fluid mt-4">
         <div class="row justify-content-center">
 
@@ -124,25 +113,17 @@ if (isset($_POST['simpan'])) {
                                 <label for="Jkel" class="form-label">Jenis Kelamin</label>
                                 <select class="form-control" name="Jkel" id="Jkel" required>
                                     <option value="">- Jenis Kelamin -</option>
-                                    <option value="Laki-Laki" <?php if ($jenisKelamin == "Laki-laki") echo "selected" ?>>Laki-laki</option>
-                                    <option value="Perempuan" <?php if ($jenisKelamin == "Perempuan") echo "selected" ?>>Perempuan</option>
+                                    <option value="Laki-Laki" >Laki-laki</option>
+                                    <option value="Perempuan" >Perempuan</option>
                                 </select>
                             </div>
 
                             <div class="mb-3">
                                 <label for="foto" class="form-label">Foto Calon Ketua</label>
-                                <?php 
-                                // if($op == 'edit' && $foto){
-                                //     echo '<img src="gambar/'. $foto.'" style="width: 150px; height: 150px; object-fit: cover; margin-bottom: 10px;" alt="Foto Saat ini"><br>';
-                                //     echo '<small class="text-muted">Kosongkan Jika tidak Ingin Mengganti Foto.</small>';
-                                // }
-                                ?>
-                                <input type="file" class="form-control" id="foto" name="foto" value="<?php echo $foto ?>">
+                                <input type="file" class="form-control" id="foto" name="foto">
                             </div>
 
-                            <div class="col-12">
-                                <input type="submit" name="simpan" value="Simpan Data" class="btn btn-primary">
-                            </div>
+                           <button type="submit" name="simpan" class="btn btn-primary">Simpan Data</button>
                         </form>
                     </div>
                 </div>
@@ -167,41 +148,25 @@ if (isset($_POST['simpan'])) {
                                     </tr>
                                 <tbody>
                                     <?php
-                                    $sql2 = "select * from tb_polling order by id_polling desc";
-                                    $q2 = mysqli_query($conn, $sql2);
-                                    $urut = 1;
-                                    while ($r2 = mysqli_fetch_array($q2)){
-                                        $id_polling = $r2['id_polling'];
-                                        $judulPolling = $r2['judul_polling'];
-                                        $nama = $r2['nama'];
-                                        $jenisKelamin = $r2['Jkel'];
-                                        $foto = $r2['foto_calon'];
-                                    
-
+                                        $no = 1;
+                                        $data = mysqli_query($conn, "SELECT * FROM tb_polling ORDER BY id_polling DESC");
+                                        while ($row = mysqli_fetch_assoc($data)):
                                     ?>
-                                    <tr>
-<<<<<<< HEAD
-                                        <th scope="row"><?php echo $urut++?></th>
-                                        <td scope="row"><?php echo $judulPolling ?></td>
-                                        <td scope="row"><?php echo $nama ?></td>
-                                        <td scope="row"><?php echo $jenisKelamin ?></td>
-                                        <td scope="row">
-                                            <img src="gambar/<?php echo $foto ?>"  style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                                        </td>
-=======
-                                        <th>1</th>
-                                        <td>Pemilihan Ketua Bem</td>
-                                        <td>Nanda</td>
-                                        <td>Laki-Laki</td>
-                                        <td>Foto</td>
->>>>>>> 4fa72a2b73af5f51fdb67ad1be6cc028a9a49e89
-                                        <td scope="row">
-                                            <button type="button" class="btn btn-danger">Delete</button>
-                                        </td>
-                                    </tr>
-                                    <?php
-                                 }
-                                 ?>
+
+                                            <tr>
+                                                <td><?= $no++ ?></td>
+                                                <td><?= $row['judul_polling']?></td>
+                                                <td><?= $row['nama']?></td>
+                                                <td><?= $row['Jkel']?></td>
+                                                <td>
+                                                    <img src="gambar/<?=$row['foto_calon'] ?>" width="80" alt="">
+                                                </td>
+                                                <td>
+                                                    <a href="buatPolling.php?op=delete&id=<?= $row['id_polling']?>" onclick="return confirm('Apakah Anda Yakin Untuk Menghapus Data?')" class="btn btn-danger btn-sm">Delete</a>
+                                                </td>
+
+                                            </tr>
+                                            <?php endwhile; ?>
                                 </tbody>
                                 </thead>
                             </table>

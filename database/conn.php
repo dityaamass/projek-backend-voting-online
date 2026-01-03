@@ -2,8 +2,8 @@
 
     $host = "localhost";
     $user = "root";
-    $pass = "";
-    $db = "e-voting";
+    $pass = "Wedanta123";
+    $db = "e_voting";
 
     $conn = mysqli_connect($host, $user, $pass, $db);
 
