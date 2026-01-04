@@ -1,5 +1,27 @@
 <?php
 
+session_start();
+include 'koneksi.php';
+
+if (!isset($_SESSION['id_user'])) {
+    header("Location: login.php");
+    exit;
+}
+
+$id_user = $_SESSION['id_user'];
+
+$cekVote = mysqli_query(
+    $conn,
+    "SELECT * FROM tb_vote WHERE id_user = '$id_user'"
+);
+
+$sudahVote = mysqli_num_rows($cekVote) > 0;
+
+$data = mysqli_query(
+    $conn,
+    "SELECT * FROM tb_polling ORDER BY id_polling DESC"
+);
+
 ?>
 
 <!DOCTYPE html>
@@ -38,47 +60,34 @@
 
     <div class="container text-center mt-5">
         <h1 class="judul">Voting</h1>
-        <h5 class="mb-4">Ayo Gunakan Suaramu dan Pilih Calon Ketua yang Tepat</h5>
 
         <div class="row justify-content-center g-4">
 
-            <div class="col-md-4 col-lg-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="gambar/Stikom Bali.png" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">Kandidat 1</h5>
-                        <p class="card-text">Nama</p>
-                        <button class="btn btn-primary">Vote</button>
-                    </div>
-                </div>
-            </div>
+            <?php while ($row = mysqli_fetch_assoc($data)): ?>
 
-            
                 <div class="col-md-4 col-lg-3">
                     <div class="card" style="width: 18rem;">
-                        <img src="gambar/Stikom Bali.png" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Kandidat 2</h5>
-                            <p class="card-text">Nama</p>
-                            <button class="btn btn-primary">Vote</button>
+                        <img src="gambar/<?= $row['foto_calon'] ?>" class="card-img-top" alt="Foto Kandidat">
+
+                        <div class="card-body text-center">
+                            <h5 class="card-title"><?= $row['judul_polling'] ?></h5>
+                            <p class="card-text"><?= $row['nama'] ?></p>
+
+                            <?php if ($sudahVote): ?>
+                                <button class="btn btn-secondary" disabled>Sudah Vote</button>
+                            <?php else: ?>
+                                <a href="prosesVote.php?id=<?= $row['id_polling'] ?>" class="btn btn-primary">
+                                    Vote
+                                </a>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
 
-                
-                    <div class="col-md-4 col-lg-3">
-                        <div class="card" style="width: 18rem;">
-                            <img src="gambar/Stikom Bali.png" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">Kandidat 3</h5>
-                                <p class="card-text">Nama</p>
-                                <button class="btn btn-primary">Vote</button>
-                            </div>
-                        </div>
-                    </div>
+            <?php endwhile; ?>
 
-                </div>
-            </div>
+        </div>
+    </div>
 </body>
 
 </html>
