@@ -21,7 +21,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         header("Location: home.php");
         exit;
     } else {
-        echo "Username atau password salah!";
+        echo '<script>
+        alert("Password anda salah");
+        </script>';
     }
 }
 
@@ -46,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
            
                 <form method="POST">
                     <div class="mb-4">
-                        <label class="form-label">User Name</label>
+                        <label class="form-label">Username</label>
                         <input type="text" class="form-control" name="username">
                         <div class="form-text">Silakan masukkan username anda.</div>
                     </div>
