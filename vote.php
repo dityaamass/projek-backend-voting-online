@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include 'koneksi.php';
+include 'database/conn.php';
 
 if (!isset($_SESSION['id_user'])) {
     header("Location: login.php");
