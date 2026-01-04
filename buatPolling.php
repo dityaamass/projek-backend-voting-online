@@ -1,27 +1,51 @@
 <?php
+
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 include 'database/conn.php';
 
-$judulPolling = "";
-$nama = "";
-$jenisKelamin = "";
-$foto = "";
-$sukses = "";
-$error = "";
+$judulPolling   = "";
+$nama           = "";
+$jenisKelamin   = "";
+$foto           = "";
+$sukses         = "";
+$error          = "";
 
-if (isset($_GET['op']) && $_GET['op'] == 'delete'){
+/* =======================
+   PROSES DELETE
+======================= */
+if (isset($_GET['op']) && $_GET['op'] == 'delete') {
     $id = $_GET['id'];
 
-    $sql = "DELETE FROM tb_polling WHERE id_polling= '$id'";
-    mysqli_query($conn, $sql);
+  
+    $cek = mysqli_query($conn, "SELECT * FROM tb_vote WHERE id_polling='$id'");
+
+    if (mysqli_num_rows($cek) > 0) {
+        echo "<script>
+                alert('Data tidak bisa dihapus karena sudah memiliki suara!');
+                window.location='buatPolling.php';
+              </script>";
+        exit;
+    }
+
+    mysqli_query($conn, "DELETE FROM tb_polling WHERE id_polling='$id'");
+    header("Location: buatPolling.php");
+    exit;
+}
+
+// proses delete polling
+if (isset($_GET['op']) && $_GET['op'] == 'delete_all') {
+
+    mysqli_query($conn, "DELETE FROM tb_vote");
+
+    mysqli_query($conn, "DELETE FROM tb_polling");
 
     header("Location: buatPolling.php");
     exit;
 }
 
-
-// proses masukan data
-
+/* =======================
+   PROSES INSERT
+======================= */
 if (isset($_POST['simpan'])) {
     $judulPolling = $_POST['judulPolling'];
     $nama = $_POST['nama'];
@@ -31,21 +55,22 @@ if (isset($_POST['simpan'])) {
     $file_tmp = $_FILES['foto']['tmp_name'];
 
     if ($judulPolling && $nama && $jenisKelamin && $foto) {
+
         move_uploaded_file($file_tmp, "gambar/" . $foto);
 
-        $sql1 = "INSERT INTO tb_polling (judul_polling, nama, Jkel, foto_calon, jumlah_suara) 
-        VALUES 
-        ('$judulPolling', '$nama', '$jenisKelamin', '$foto', 0)";
+        $sql = "INSERT INTO tb_polling 
+                (judul_polling, nama, Jkel, foto_calon, jumlah_suara)
+                VALUES 
+                ('$judulPolling', '$nama', '$jenisKelamin', '$foto', 0)";
 
-        mysqli_query($conn, $sql1);
+        mysqli_query($conn, $sql);
 
         header("Location: buatPolling.php");
         exit;
 
-        
-} else {
-    $error = "Semua Data Wajib Diisi";
-}
+    } else {
+        $error = "Semua data wajib diisi";
+    }
 }
 
 ?>
