@@ -77,14 +77,12 @@ if (isset($_POST['simpan'])) {
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Membuat Polling</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="CSS/polling.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/polling.css">
 </head>
 
-<body>
+<body class="bg-light">
     <ul class="nav justify-content-end bg-light p-2 shadow-sm">
         <li class="nav-item me-auto">
             <img src="gambar/Stikom Bali.png" alt="logo" widht="50" height="50" class="rounded">
@@ -105,101 +103,111 @@ if (isset($_POST['simpan'])) {
             <a class="nav-link text-danger" href="login.php">Logout</a>
         </li>
     </ul>
-    <h1>SISTEM PEMILIHAN ORGANISASI ITB STIKOM BALI</h1>
-    <h5>Silakan Lengkapi Data di Bawah Ini</h5>
 
-    <?php if($error): ?>
-        <div class="alert alert-danger"><?= $error ?></div>
-    <?php endif; ?>
+    <div class="container mt-4">
 
-    <div class="container-fluid mt-4">
-        <div class="row justify-content-center">
+        <h3 class="text-center mb-4">SISTEM PEMILIHAN ORGANISASI ITB STIKOM BALI</h3>
 
-            <div class="col-md-8 mb-4">
-                <div class="card shadow-sm">
-                    <div class="card-header bg-secondary text-white">
-                        Membuat Polling
-                    </div>
-                    <div class="card-body">
-                        <form method="POST" enctype="multipart/form-data">
-                            <div class="mb-3">
-                                <label for="polling" class="form-label">Judul Polling</label>
-                                <input type="text" class="form-control" id="judulPolling" name = "judulPolling" aria-describedby="polling" value="<?php echo $judulPolling ?>">
-                            </div>
+        <?php if ($error): ?>
+            <div class="alert alert-danger"><?= $error ?></div>
+        <?php endif; ?>
 
-                            <div class="mb-3">
-                                <label for="nama" class="form-label">Nama</label>
-                                <input type="text" class="form-control" id="nama" name="nama" aria-describedby="nama" value="<?php echo $nama ?>">
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="Jkel" class="form-label">Jenis Kelamin</label>
-                                <select class="form-control" name="Jkel" id="Jkel" required>
-                                    <option value="">- Jenis Kelamin -</option>
-                                    <option value="Laki-Laki" >Laki-laki</option>
-                                    <option value="Perempuan" >Perempuan</option>
-                                </select>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="foto" class="form-label">Foto Calon Ketua</label>
-                                <input type="file" class="form-control" id="foto" name="foto">
-                            </div>
-
-                           <button type="submit" name="simpan" class="btn btn-primary">Simpan Data</button>
-                        </form>
-                    </div>
-                </div>
+        <!-- FORM INPUT -->
+        <div class="card mb-4">
+            <div class="card-header bg-secondary text-white">
+                Membuat Polling
             </div>
+            <div class="card-body">
+                <form method="POST" enctype="multipart/form-data">
 
-            <div class="col-md-10">
-                <div class="card shadow-sm">
-                    <div class="card-header text-white bg-secondary text-center">
-                        Tabel Polling
+                    <div class="mb-3">
+                        <label>Judul Polling</label>
+                        <input type="text" name="judulPolling" class="form-control">
                     </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">No</th>
-                                        <th scope="col">Judul</th>
-                                        <th scope="col">Nama</th>
-                                        <th scope="col">Jenis Kelamin</th>
-                                        <th scope="col">Foto</th>
-                                        <th scope="col">Aksi</th>
-                                    </tr>
-                                <tbody>
-                                    <?php
-                                        $no = 1;
-                                        $data = mysqli_query($conn, "SELECT * FROM tb_polling ORDER BY id_polling DESC");
-                                        while ($row = mysqli_fetch_assoc($data)):
-                                    ?>
 
-                                            <tr>
-                                                <td><?= $no++ ?></td>
-                                                <td><?= $row['judul_polling']?></td>
-                                                <td><?= $row['nama']?></td>
-                                                <td><?= $row['Jkel']?></td>
-                                                <td>
-                                                    <img src="gambar/<?=$row['foto_calon'] ?>" width="80" alt="">
-                                                </td>
-                                                <td>
-                                                    <a href="buatPolling.php?op=delete&id=<?= $row['id_polling']?>" onclick="return confirm('Apakah Anda Yakin Untuk Menghapus Data?')" class="btn btn-danger btn-sm">Delete</a>
-                                                </td>
-
-                                            </tr>
-                                            <?php endwhile; ?>
-                                </tbody>
-                                </thead>
-                            </table>
-                        </div>
+                    <div class="mb-3">
+                        <label>Nama</label>
+                        <input type="text" name="nama" class="form-control">
                     </div>
-                </div>
+
+                    <div class="mb-3">
+                        <label>Jenis Kelamin</label>
+                        <select name="Jkel" class="form-control">
+                            <option value="">-- Pilih --</option>
+                            <option value="Laki-Laki">Laki-Laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Foto Calon</label>
+                        <input type="file" name="foto" class="form-control">
+                    </div>
+
+                    <button type="submit" name="simpan" class="btn btn-primary">
+                        Simpan Data
+                    </button>
+
+                </form>
             </div>
         </div>
-    </div>
 
+        <!-- TABEL DATA -->
+        <div class="card">
+            <div class="card-header bg-secondary text-white text-center">
+                Tabel Polling
+            </div>
+            <div class="card-body table-responsive">
+                <table class="table table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>No</th>
+                            <th>Judul</th>
+                            <th>Nama</th>
+                            <th>Jenis Kelamin</th>
+                            <th>Foto</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <?php
+                        $no = 1;
+                        $data = mysqli_query($conn, "SELECT * FROM tb_polling ORDER BY id_polling DESC");
+                        while ($row = mysqli_fetch_assoc($data)):
+                            ?>
+
+                            <tr>
+                                <td><?= $no++ ?></td>
+                                <td><?= $row['judul_polling'] ?></td>
+                                <td><?= $row['nama'] ?></td>
+                                <td><?= $row['Jkel'] ?></td>
+                                <td>
+                                    <img src="gambar/<?= $row['foto_calon'] ?>" width="80">
+                                </td>
+                                <td>
+                                    <a href="buatPolling.php?op=delete&id=<?= $row['id_polling'] ?>"
+                                        onclick="return confirm('Yakin hapus data?')" class="btn btn-danger btn-sm">
+                                        Delete
+                                    </a>
+                                </td>
+                            </tr>
+
+                        <?php endwhile; ?>
+
+                    </tbody>
+                    <div class="d-flex justify-content-end mb-3">
+                        <a href="buatPolling.php?op=delete_all"
+                            onclick="return confirm('Yakin ingin menghapus SEMUA polling dan suara?')"
+                            class="btn btn-danger">
+                            Hapus Semua Polling
+                        </a>
+                    </div>
+                </table>
+            </div>
+        </div>
+
+    </div>
 
 </body>
 
