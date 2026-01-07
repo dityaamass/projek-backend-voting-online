@@ -73,7 +73,26 @@ $query = mysqli_query($conn, "
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php
+                                    $no = 1;
+                                    while ($data = mysqli_fetch_assoc($query)) {
+                                    ?>
 
+                                        <tr>
+                                            <td><?= $no++; ?></td>
+                                            <td><?= $data['nama']; ?></td>
+                                            <td><?= $data['Jkel']; ?></td>
+                                            <td>
+                                                <img src="gambar/<?= $data['foto_calon']; ?>" width="80">
+                                            </td>
+                                            <td>
+                                                <span class="badge bg-success fs-6">
+                                                    <?= $data['jumlah_vote']; ?>
+                                                </span>
+                                            </td>
+                                        </tr>
+
+                                    <?php } ?>
                                 </tbody>
                             </table>
                         </div>
