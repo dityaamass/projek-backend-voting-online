@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'koneksi.php';
+include 'database/conn.php';
 
 $id_user = $_SESSION['id_user'];
 $id_polling = $_GET['id'];
