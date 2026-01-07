@@ -128,16 +128,6 @@
         </div>
     </div>
 
-    <!-- <div class="cta-section">
-        <h3>- Ayo Buat Polling -</h3>
-        <p>
-            Mari berpartisipasi dalam proses pemilihan organisasi mahasiswa secara online
-            yang transparan, aman, dan terpercaya.
-            Gunakan hak suara Anda untuk menentukan kepengurusan organisasi yang lebih baik.
-        </p>
-        <a href="buatPolling.php" class="btn btn-primary">Buat Polling</a>
-    </div> -->
-
 </body>
 
 </html>
