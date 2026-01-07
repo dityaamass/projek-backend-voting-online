@@ -84,42 +84,42 @@
                 <div class="row feature-list mt-4">
                     <div class="col-md-4 feature-item">
                         <div class="feature-box">
-                            <img src="gambar/Stikom Bali.png" alt="logo" width="60" height="60" class="rounded">
+                            <img src="gambar/cek.jpg" alt="logo" width="60" height="60" class="rounded">
                             <span>Efisien & Efektif</span>
                         </div>
                     </div>
 
                     <div class="col-md-4 feature-item">
                         <div class="feature-box">
-                            <img src="gambar/Stikom Bali.png" alt="logo" width="60" height="60" class="rounded">
+                            <img src="gambar/jam.jpg" alt="logo" width="60" height="60" class="rounded">
                             <span>Penghitungan suara lebih cepat</span>
                         </div>
                     </div>
 
                     <div class="col-md-4 feature-item">
                         <div class="feature-box">
-                            <img src="gambar/Stikom Bali.png" alt="logo" width="60" height="60" class="rounded">
+                            <img src="gambar/data.jpg" alt="logo" width="60" height="60" class="rounded">
                             <span>Tidak ada duplikasi data pemilih</span>
                         </div>
                     </div>
 
                     <div class="col-md-4 feature-item">
                         <div class="feature-box">
-                            <img src="gambar/Stikom Bali.png" alt="logo" width="60" height="60" class="rounded">
+                            <img src="gambar/kertas.jpg" alt="logo" width="60" height="60" class="rounded">
                             <span>Tidak ada suara rusak</span>
                         </div>
                     </div>
 
                     <div class="col-md-4 feature-item">
                         <div class="feature-box">
-                            <img src="gambar/Stikom Bali.png" alt="logo" width="60" height="60" class="rounded">
+                            <img src="gambar/akurasi.jpg" alt="logo" width="60" height="60" class="rounded">
                             <span>Akurasi hitungan suara tinggi</span>
                         </div>
                     </div>
 
                     <div class="col-md-4 feature-item">
                         <div class="feature-box">
-                            <img src="gambar/Stikom Bali.png" alt="logo" width="60" height="60" class="rounded">
+                            <img src="gambar/uang.jpg" alt="logo" width="60" height="60" class="rounded">
                             <span>Menghemat biaya jangka panjang</span>
                         </div>
                     </div>

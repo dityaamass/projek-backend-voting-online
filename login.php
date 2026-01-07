@@ -8,8 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $username = $_POST['username'];
     $password = $_POST['pass'];
 
-    $query = "SELECT * FROM anggota 
-              WHERE username='$username' AND pass='$password'";
+    $query = "SELECT * FROM anggota WHERE username='$username' AND pass='$password'";
     $result = mysqli_query($conn, $query);
 
     if (mysqli_num_rows($result) > 0) {
@@ -21,9 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         header("Location: home.php");
         exit;
     } else {
-        echo '<script>
-        alert("Password anda salah");
-        </script>';
+        echo '<script>alert("Password anda salah");</script>';
     }
 }
 

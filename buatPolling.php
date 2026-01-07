@@ -10,9 +10,7 @@ $foto           = "";
 $sukses         = "";
 $error          = "";
 
-/* =======================
-   PROSES DELETE
-======================= */
+// Proses Delete Data
 if (isset($_GET['op']) && $_GET['op'] == 'delete') {
     $id = $_GET['id'];
 
@@ -43,9 +41,9 @@ if (isset($_GET['op']) && $_GET['op'] == 'delete_all') {
     exit;
 }
 
-/* =======================
-   PROSES INSERT
-======================= */
+
+//    Proses Insert Data
+
 if (isset($_POST['simpan'])) {
     $judulPolling = $_POST['judulPolling'];
     $nama = $_POST['nama'];
