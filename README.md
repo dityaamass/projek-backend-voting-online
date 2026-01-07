@@ -165,3 +165,9 @@ Jika sudah berhasil masuk ke login page maka lakukan uji sistem dengan langkah" 
 
 **5. Logout**
 - User dapat melakukan logout dengan cara klik tulisan logout pada navbar dan akan dialihkan kembali ke login page.
+
+# **KEKURANGAN SISTEM** #
+- Tidak terdapat halaman khusus untuk user dan admin,
+- halaman user dan admin sama dan tidak memiliki perbedaan,
+- user dapat membuat polling dan menghapus polling,
+- admin dapat melakukan voting.
