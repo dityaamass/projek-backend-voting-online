@@ -1,6 +1,6 @@
 <?php
 
-include "koneksi.php";
+include "database/conn.php";
 
 $query = mysqli_query($conn, "
     SELECT 
