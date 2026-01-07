@@ -10,8 +10,10 @@ Sistem Voting Online merupakan aplikasi backend yang dirancang untuk mengelola p
 
 | No | Nama | NIM | Username GitHub | Peran / Tugas |
 |----|------|-----|----------------|---------------|
-| 1  | Dewa Gede Nanda Wedanta | 240030303 | Nanda777 -gtg | Backend Developer, Database Design, Frontend Developer, Testing |
+| 1  | Dewa Gede Nanda Wedanta | 240030303 | Nanda777-gtg | Backend Developer, Database Design, Frontend Developer, Testing |
 | 2  | I Wayan Ditya Mas Putra Pratama | 240030280 | dityaamass | Backend Developer, Frontend Developer, Dokumentasi, Testing |
+| 3  | I Putu Candra Ardika Putra | 240030313 | CandraArdika | - |
+| 4  | I Gusti Ngurah Bagus Banyu Prabayana | 240030265 | banyuprabayana-design | - |
 
 # **LINGKUNGAN PENGEMBANGAN** #
 
