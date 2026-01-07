@@ -40,7 +40,7 @@
     </ul>
 
     <h1 class="judul">- Selamat Datang -</h1>
-    <h3 class="subjudul">SISTEM PEMILIHAN ORGANISASI ITB STIKOM BALI</h3>
+    <h3 class="subjudul">SISTEM PEMILIHAN PENGURUS ITB STIKOM BALI</h3>
     <div class="container my-5">
         <div class="row align-items-center">
             <div class="col-md-5">
@@ -73,8 +73,8 @@
                 <h3 class="about-title">About Us</h3>
                 <hr class="about-line">
                 <p class="about-text">
-                    Sistem Pemilihan Organisasi ITB STIKOM Bali merupakan aplikasi berbasis website yang digunakan
-                    untuk mendukung proses pemilihan pengurus organisasi mahasiswa secara online.
+                    Sistem Voting ITB STIKOM Bali merupakan aplikasi berbasis website yang digunakan
+                    untuk mendukung proses pemilihan pengurus mahasiswa secara online.
                     Sistem ini bertujuan untuk meningkatkan efisiensi, transparansi, dan keamanan pemungutan suara,
                     serta memudahkan mahasiswa dan panitia dalam pelaksanaan dan pengelolaan proses pemilihan.
                 </p>

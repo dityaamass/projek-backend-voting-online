@@ -2,7 +2,7 @@
 
     $host = "localhost";
     $user = "root";
-    $pass = "Wedanta123";
+    $pass = "";
     $db   = "e_voting";
 
     $conn = mysqli_connect($host, $user, $pass, $db);
