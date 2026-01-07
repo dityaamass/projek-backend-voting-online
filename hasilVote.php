@@ -1,5 +1,20 @@
 <?php
 
+include "koneksi.php";
+
+$query = mysqli_query($conn, "
+    SELECT 
+        tb_polling.id_polling,
+        tb_polling.nama,
+        tb_polling.Jkel,
+        tb_polling.foto_calon,
+        COUNT(tb_vote.id_vote) AS jumlah_vote
+    FROM tb_polling
+    LEFT JOIN tb_vote 
+        ON tb_polling.id_polling = tb_vote.id_polling
+    GROUP BY tb_polling.id_polling
+");
+
 ?>
 
 <!DOCTYPE html>
