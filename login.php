@@ -1,5 +1,5 @@
 <?php
-    
+
 session_start();
 include 'database/conn.php';
 
@@ -42,26 +42,25 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <img src="gambar/Stikom Bali.png " alt="" class="d-block mx-auto mb-3" style="width: 100px">
 
         <body class="body">
-           
-                <form method="POST">
-                    <div class="mb-4">
-                        <label class="form-label">Username</label>
-                        <input type="text" class="form-control" name="username">
-                        <div class="form-text">Silakan masukkan username anda.</div>
-                    </div>
-                    <div class="mb-4">
-                        <label class="form-label">Password</label>
-                        <input type="password" class="form-control" name="pass">
-                    </div>
-                    <div class="mb-4  form-check">
-                        <input type="checkbox" class="form-check-input">
-                        <label class="form-check-label">Remember Me</label>
-                    </div>
 
-                    <button type="submit" class="btn btn-primary w-100">Login</buttoon>
+            <form method="POST">
+                <div class="mb-4">
+                    <label class="form-label">Username</label>
+                    <input type="text" class="form-control" name="username">
+                    <div class="form-text">Silakan masukkan username anda.</div>
+                </div>
+                <div class="mb-4">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control" name="pass">
+                </div>
+                <div class="text-center">
+                    <p class="mt-3">Belum punya akun? <a href="registration.php">Daftar disini!</a></p>
+                </div>
 
-                </form>
-            
+                <button type="submit" class="btn btn-primary w-100">Login</buttoon>
+
+            </form>
+
     </div>
 </div>
 
