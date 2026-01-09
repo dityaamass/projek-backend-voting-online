@@ -17,8 +17,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $_SESSION['id_user'] = $dataUser['id_user'];
         $_SESSION['username'] = $dataUser['username'];
 
-        header("Location: home.php");
-        exit;
+        $role = ($dataUser ['role']);
+        $_SESSION['role'] = $role;
+        
+        if ($role == 'admin') {
+            header("Location: adminHome.php");
+            exit;
+        } else if ($role == 'user') {
+            header("Location: userHome.php");
+            exit;
+        } else {
+            echo '<script>alert("Role pengguna tidak valid"); window.location = "login.php";</script>';
+             exit;
+        }
+        
     } else {
         echo '<script>alert("Password anda salah");</script>';
     }
