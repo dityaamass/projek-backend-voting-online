@@ -12,7 +12,7 @@ $cek = mysqli_query($conn,
 if (mysqli_num_rows($cek) > 0) {
     echo "<script>
         alert('Anda sudah melakukan vote!');
-        window.location='../vote.php';
+        window.location= '../vote.php';
     </script>";
     exit;
 }

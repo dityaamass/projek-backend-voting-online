@@ -70,7 +70,7 @@ $data = mysqli_query(
                             <?php if ($sudahVote): ?>
                                 <button class="btn btn-secondary" disabled>Sudah Vote</button>
                             <?php else: ?>
-                                <a href="prosesVote.php?id=<?= $row['id_polling'] ?>" class="btn btn-primary">
+                                <a href="System/prosesVote.php?id=<?= $row['id_polling'] ?>" class="btn btn-primary">
                                     Vote
                                 </a>
                             <?php endif; ?>
