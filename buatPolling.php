@@ -103,7 +103,7 @@ if (isset($_POST['simpan'])) {
 
     <div class="container mt-4">
 
-        <h3 class="text-center mb-4">SISTEM PEMILIHAN ORGANISASI ITB STIKOM BALI</h3>
+        <h3 class="text-center mb-4">SISTEM PEMILIHAN PENGURUS ITB STIKOM BALI</h3>
 
         <?php if ($error): ?>
             <div class="alert alert-danger"><?= $error ?></div>
