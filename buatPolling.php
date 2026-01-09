@@ -88,13 +88,10 @@ if (isset($_POST['simpan'])) {
             <img src="gambar/Stikom Bali.png" alt="logo" widht="50" height="50" class="rounded">
         </li>
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="home.php">Home</a>
+            <a class="nav-link active" aria-current="page" href="adminHome.php">Home</a>
         </li>
         <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="buatPolling.php">Create Vote</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="vote.php">Vote</a>
         </li>
         <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="hasilVote.php">Hasil Vote</a>

@@ -42,16 +42,10 @@ $data = mysqli_query(
             <img src="gambar/Stikom Bali.png" alt="logo" widht="50" height="50" class="rounded">
         </li>
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="home.php">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="buatPolling.php">Create Vote</a>
+            <a class="nav-link active" aria-current="page" href="userHome.php">Home</a>
         </li>
         <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="vote.php">Vote</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="hasilVote.php">Hasil Vote</a>
         </li>
         <li class="nav-item">
             <a class="nav-link text-danger" href="login.php">Logout</a>
