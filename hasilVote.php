@@ -65,7 +65,7 @@ $query = mysqli_query($conn, "
                                         <th scope="col">No</th>
                                         <th scope="col">Nama</th>
                                         <th scope="col">Jenis Kelamin</th>
-                                        <th scope="col">foto</th>
+                                        <th scope="col">Foto</th>
                                         <th scope="col">Jumlah Vote</th>
                                     </tr>
                                 </thead>

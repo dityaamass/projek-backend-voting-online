@@ -64,6 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <div class="mb-4">
                     <label class="form-label">Password</label>
                     <input type="password" class="form-control" name="pass">
+                    <div class="form-text">Silakan masukkan password anda.</div>
                 </div>
                 <div class="text-center">
                     <p class="mt-3">Belum punya akun? <a href="registration.php">Daftar disini!</a></p>
