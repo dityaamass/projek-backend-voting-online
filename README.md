@@ -47,21 +47,37 @@ Berikut adalah modul dan fitur utama yang telah diimplementasikan :
   
 # **STRUKTUR FOLDER** #
 
-    CSS/                    // Folder untuk menyimpan file .css 
-    database/               // Folder untuk menyimpan file .sql dan koneksi database ke PHP
-    gambar/                 // Folder untuk menyimpan gambar yg ada di dalam sistem
-    System/                 // Folder untuk menyimpan semua file php yg berisi fungsi untuk menjalankan sistem
-    System/prosesVote.php   // Skrip untuk memproses dalam melakukan voting
-    System/register.php     // Skrip untuk memproses fungsi melakukan registrasi
-    buatPolling.php         // Skrip untuk memproses aksi membuat polling pada sistem
-    hasilVote.php           // Skrip untuk menampilkan hasil voting yang sudah dilakukan
-    adminHome.php           // Skrip untuk menampilkan halaman home untuk admin pada sistem
-    userHome.php            // Skrip untuk menampilkan halaman home untuk user pada sistem
-    login.php               // Skrip untuk menampilkan halaman login page dan proses untuk melakukan login ke dalam sistem
-    register.php            // Skrip untuk menampilkan halaman registrasi
-    vote.php                // Skrip untuk menampilkan halaman untuk melakukan voting pada sistem 
-    README.md               // Dokumentasi sistem
-
+    Projek-Backend-Voting-Online/
+    ├── CSS/                // Folder untuk menyimpan file .css 
+    │  ├── hasilvote.css
+    │  ├── home.css
+    │  ├── login.css
+    │  ├── polling.css
+    │  └── vote.css
+    ├── System/            // Folder untuk menyimpan semua file php yg berisi fungsi untuk menjalankan sistem
+    │  ├── prosesVote.php  // Skrip untuk memproses dalam melakukan voting
+    │  └── register.php    // Skrip untuk memproses fungsi melakukan registrasi
+    ├── database/          // Folder untuk menyimpan file .sql dan koneksi database ke PHP
+    │  ├── conn.php        // Skrip untuk mengkoneksikan MySql dengan PHP
+    │  └── database.sql    // Database yang digunakan untuk menyimpan semua data yg ada di sistem
+    ├── gambar/
+    │  ├── Stikom Bali.png
+    │  ├── akurasi.jpg
+    │  ├── data.jpg
+    │  ├── jam.jpg
+    │  ├── kertas.jpg
+    │  ├── uang.jpg
+    │  └── user.jpg
+    ├── .gitattributes
+    ├── README.md          // Dokumentasi sistem
+    ├── adminHome.php      // Skrip untuk menampilkan halaman home untuk admin pada sistem
+    ├── buatPolling.php    // Skrip untuk memproses aksi membuat polling pada sistem
+    ├── hasilVote.php      // Skrip untuk menampilkan hasil voting yang sudah dilakukan
+    ├── login.php          // Skrip untuk menampilkan halaman login page dan proses untuk melakukan login ke dalam sistem
+    ├── registration.php   // Skrip untuk menampilkan halaman registrasi
+    ├── userHome.php       // Skrip untuk menampilkan halaman home untuk user pada sistem
+    └── vote.php           // Skrip untuk menampilkan halaman untuk melakukan voting pada sistem 
+    
 # **LANGKAH IMPORT DATABASE** #
 
 Sistem ini menggunakan aplikasi Laragon dan membutuhkan database dengan nama db_voting. pada repository sudah terdapat file [database.sql](database/database.sql), lalu ikuti langkah-langkah berikut :
