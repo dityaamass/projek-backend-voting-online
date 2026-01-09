@@ -12,7 +12,7 @@
 </head>
 <div class="d-flex justify-content-center align-items-center vh-100">
     <div class="box p-4 shadow bg-white rounded" style="width: 350px;">
-        <img src="gambar/Stikom Bali.png " alt="" class="d-block mx-auto mb-3" style="width: 100px">
+        <img src="gambar/Go Vote!.png " alt="" class="d-block mx-auto mb-3" style="width: 100px">
 
         <body class="body">
 

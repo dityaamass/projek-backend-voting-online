@@ -30,9 +30,9 @@ $query = mysqli_query($conn, "
 </head>
 
 <body>
-    <ul class="nav justify-content-end bg-light p-2 shadow-sm">
+    <ul class="nav justify-content-end bg-light fw-semibold p-2 shadow-sm">
         <li class="nav-item me-auto">
-            <img src="gambar/Stikom Bali.png" alt="logo" widht="50" height="50" class="rounded">
+            <img src="gambar/Go Vote! (1).png" alt="logo" widht="50" height="50" class="rounded">
         </li>
         <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="adminHome.php">Home</a>

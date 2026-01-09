@@ -1,9 +1,3 @@
-<?php
-
-include 'database/conn.php';
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,9 +14,9 @@ include 'database/conn.php';
 </head>
 
 <body>
-    <ul class="nav justify-content-end bg-light p-2 shadow-sm">
+    <ul class="nav justify-content-end bg-light fw-semibold p-2 shadow-sm">
         <li class="nav-item me-auto">
-            <img src="gambar/Stikom Bali.png" alt="logo" widht="50" height="50" class="rounded">
+            <img src="gambar/Go Vote! (1).png" alt="logo" widht="50" height="50" class="rounded">
         </li>
         <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="adminHome.php">Home</a>
@@ -39,20 +33,19 @@ include 'database/conn.php';
     </ul>
 
     <h1 class="judul">- Selamat Datang -</h1>
-    <h3 class="subjudul">SISTEM PEMILIHAN PENGURUS ITB STIKOM BALI</h3>
     <div class="container my-5">
         <div class="row align-items-center">
             <div class="col-md-5">
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="gambar/Stikom Bali.png" class="d-block w-100" alt="...">
+                            <img src="gambar/Go Vote!.png" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="gambar/Stikom Bali.png" class="d-block w-100" alt="...">
+                            <img src="gambar/Go Vote!.png" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="gambar/Stikom Bali.png" class="d-block w-100" alt="...">
+                            <img src="gambar/Go Vote!.png" class="d-block w-100" alt="...">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
@@ -72,12 +65,11 @@ include 'database/conn.php';
                 <h3 class="about-title">About Us</h3>
                 <hr class="about-line">
                 <p class="about-text">
-                    Sistem Voting ITB STIKOM Bali merupakan aplikasi berbasis website yang digunakan
-                    untuk mendukung proses pemilihan pengurus mahasiswa secara online.
+                    Sistem Voting Go Vote merupakan aplikasi berbasis website yang digunakan
+                    untuk mendukung proses voting secara online.
                     Sistem ini bertujuan untuk meningkatkan efisiensi, transparansi, dan keamanan pemungutan suara,
-                    serta memudahkan mahasiswa dan panitia dalam pelaksanaan dan pengelolaan proses pemilihan.
+                    serta memudahkan pengguna dan admin dalam pelaksanaan dan pengelolaan proses pemilihan.
                 </p>
-
                 <p>Keuntungan yang didapat adalah paperless, meminimalisir kecurangan dan real time result.</p>
 
                 <div class="row feature-list mt-4">

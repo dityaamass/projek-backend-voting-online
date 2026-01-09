@@ -85,7 +85,7 @@ if (isset($_POST['simpan'])) {
 <body class="bg-light">
     <ul class="nav justify-content-end bg-light p-2 shadow-sm">
         <li class="nav-item me-auto">
-            <img src="gambar/Stikom Bali.png" alt="logo" widht="50" height="50" class="rounded">
+            <img src="gambar/Go Vote! (1).png" alt="logo" widht="50" height="50" class="rounded">
         </li>
         <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="adminHome.php">Home</a>
@@ -102,8 +102,6 @@ if (isset($_POST['simpan'])) {
     </ul>
 
     <div class="container mt-4">
-
-        <h3 class="text-center mb-4">SISTEM PEMILIHAN PENGURUS ITB STIKOM BALI</h3>
 
         <?php if ($error): ?>
             <div class="alert alert-danger"><?= $error ?></div>
