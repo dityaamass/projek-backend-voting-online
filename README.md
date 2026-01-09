@@ -127,12 +127,12 @@ Jika sudah berhasil masuk ke login page maka lakukan uji sistem dengan langkah" 
 - Sebelum masuk ke halaman home pengguna diwajibkan untuk melakukan login atau registrasi terlebih dahulu.
 
   **Halaman Login**
-  <img width="1917" height="997" alt="image" src="https://github.com/user-attachments/assets/d1138670-3881-48d5-8a1a-a261c25c5e47" />
+  <img width="1919" height="997" alt="image" src="https://github.com/user-attachments/assets/d9fe9f72-b51d-4ca7-bf3a-34251406216b" />
 
 - Jika belum memiliki akun, pengguna dapat mengklik tulisan "Daftar disini" dan akan dialihkan ke halaman registrasi.
 
   **Halaman Registrasi**
-  <img width="1918" height="995" alt="image" src="https://github.com/user-attachments/assets/e029193c-0045-4dc7-b828-4fed75a3b699" />
+  <img width="1919" height="995" alt="image" src="https://github.com/user-attachments/assets/e03c5967-2713-4b6b-b37b-3611bfbbad65" />
 
 - Lakukan registrasi dengan cara menginput username dan juga password serta pilih sebagai siapa pengguna ingin melakukan login.
 - Jika sudah, klik tombol "Register" dan akan dialihkan kembali ke halaman login.
@@ -140,12 +140,12 @@ Jika sudah berhasil masuk ke login page maka lakukan uji sistem dengan langkah" 
 - Jika sudah, klik tombol Login dan anda akan dialihkan ke halaman Home sesuai dengan role yg dipilih.
 
   **Halaman Home Page untuk Admin**
-  <img width="1917" height="996" alt="image" src="https://github.com/user-attachments/assets/06648f50-cedc-4113-88dc-905114fe6ce0" />
+  <img width="1919" height="997" alt="image" src="https://github.com/user-attachments/assets/cc49166e-d773-4c81-a8a6-aa1a89a331df" />
 
 - Jika user login dengan role user maka akan dialihkan ke halaman Home untuk user.
   
   **Halaman Home Page untuk User**
-  <img width="1917" height="996" alt="image" src="https://github.com/user-attachments/assets/a737d100-a764-4d91-aa23-44983e94c1ba" />
+  <img width="1919" height="996" alt="image" src="https://github.com/user-attachments/assets/b38b5beb-4917-46f4-bea6-9251ed3d0476" />
 
 # **UJI SISTEM ADMIN** #
 
@@ -153,7 +153,7 @@ Jika sudah berhasil masuk ke login page maka lakukan uji sistem dengan langkah" 
 - Pada Home Page admin klik tulisan "Create Vote" pada navbar dan akan dialihkan ke halaman membuat polling.
   
   **Halaman Membuat Polling**
-  <img width="1917" height="996" alt="image" src="https://github.com/user-attachments/assets/abf0ffbe-b503-46f2-88d2-db8826cce9a7" />
+  <img width="1919" height="996" alt="image" src="https://github.com/user-attachments/assets/42711c9d-2d66-4066-81b5-c6ee4a053cc1" />
 
 - Pada halaman buat polling input data :
 
@@ -164,7 +164,7 @@ Jika sudah berhasil masuk ke login page maka lakukan uji sistem dengan langkah" 
 - Jika sudah selesai membuat polling langsung tekan tombol "Simpan Data" dan data akan tersimpan di "Tabel Polling".
 
   **Halaman jika data sudah tersimpan ke dalam Tabel Polling**
-  <img width="1919" height="998" alt="image" src="https://github.com/user-attachments/assets/7a2f9a7d-fa69-406a-b8fc-83847a13b5b9" />
+  <img width="1919" height="996" alt="image" src="https://github.com/user-attachments/assets/959cd5ae-daef-488b-bfc4-b59063246b8f" />
 
 - Admin juga dapat menghapus semua data di dalam tabel dengan mengklik tombol "Hapus Semua Polling" pada tabel polling .
 
@@ -173,12 +173,12 @@ Jika sudah berhasil masuk ke login page maka lakukan uji sistem dengan langkah" 
 - Pada halaman ini terdapat tabel untuk menampung data kandidat dan jumlah voting yang didapat oleh setiap kandidat.
 
   **Halaman Hasil Voting**
-  <img width="1916" height="995" alt="image" src="https://github.com/user-attachments/assets/fd367620-883a-4b91-989e-4b1cb3feec1f" />
+  <img width="1919" height="993" alt="image" src="https://github.com/user-attachments/assets/ca7fd36b-f620-4e9f-b0e7-ac40596b9128" />
 
 - Jika User sudah melakukan voting maka jumlah vote akan bertambah 1.
 
   **Halaman jika User sudah melakukan voting**
-  <img width="1919" height="997" alt="image" src="https://github.com/user-attachments/assets/19480861-b0b1-4746-9c7f-436e46ebf9e1" />
+  <img width="1919" height="996" alt="image" src="https://github.com/user-attachments/assets/2e8d95ff-ba50-49dc-b255-9360e7ea87ff" />
 
 **5. Logout**
 - Admin dapat melakukan logout dengan cara klik tulisan logout pada navbar dan akan dialihkan kembali ke login page.
@@ -189,13 +189,13 @@ Jika sudah berhasil masuk ke login page maka lakukan uji sistem dengan langkah" 
 - Pada halaman Home User klik tulisan "Vote" pada navbar dan akan dialihkan ke halaman voting
 
   **Halaman Voting**
-  <img width="1918" height="995" alt="image" src="https://github.com/user-attachments/assets/285504a0-c2ae-4d0c-8ad6-10ffd0f1e5ab" />
+  <img width="1919" height="995" alt="image" src="https://github.com/user-attachments/assets/455eb043-77f1-4965-9f2e-106b850f2d30" />
 
 - Pada halaman voting user dapat melakukan voting dengan mengklik tombol "Vote" dibawah nama kandidat dan user hanya dapat melakukan voting sekali per user.
 - Jika sudah melakukan vote maka tombol "Vote" akan berubah menjadi "Sudah Vote" yang artinya voting sudah berhasil dilakukan.
 
   **Halaman Voting Jika Sudah Melakukan Voting**
-  <img width="1917" height="997" alt="image" src="https://github.com/user-attachments/assets/94bbc97c-857c-436e-8475-6ee92e95121e" />
+  <img width="1919" height="995" alt="image" src="https://github.com/user-attachments/assets/1f7c7fed-07e9-4182-8946-b0248ae597b4" />
 
 **2. Logout**
 - User dapat melakukan logout dengan cara klik tulisan logout pada navbar dan akan dialihkan kembali ke login page.
